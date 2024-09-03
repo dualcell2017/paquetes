@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta API</title>
+	 <!-- This is the minified production version of Parse JS -->
+ <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+<script>
+Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
+// Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
+Parse.initialize(
+  'NB8nA5zBcPd065rVSZw90oT13t1rsDetvQ5DDgb8', // This is your Application ID
+  '80hhalsMBNws8n9vNK1bmWJCF9fRBL2Eh5t1qrHm' // This is your Javascript key
+);
+</script>
+	   
+	  
+	  
+    <link rel="stylesheet" href="styles.css">
+	
+</head>
+<body>
+    <div class="container">
+        <!-- Menu de Opciones -->
+        <nav>
+            <ul>
+                <li><a href="#" onclick="mostrarQuienesSomos()">Quiénes Somos</a></li>
+                <li><a href="#" onclick="mostrarContactenos()">Contáctenos</a></li>
+            </ul>
+        </nav>
+        
+        <img src="logo.png" alt="Logo" class="logo">
+        
+        <input type="text" id="inputField" maxlength="12" placeholder="Introduce 12 caracteres">
+        <button id="searchButton" onclick="buscar()">Buscar</button>
+        
+        <div id="loading" class="loading"></div>
+        <div id="resultContainer" class="result-container"></div>
+        <button id="backButton" class="hidden" onclick="volver()">Volver</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
