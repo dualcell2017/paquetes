@@ -16,7 +16,7 @@
     // Realizar la consulta a Parse
     const query = new Parse.Query('envio');
     query.equalTo('paquete', str_input);
-	query.orderByDescending('createdAt'); // Ordena por 'createdAt' de forma descendente
+	query.ascending('createdAt'); // Ordena por 'createdAt' de forma descendente
 
     try {
         const object = await query.first(); // Obtener el primer resultado de la consulta
